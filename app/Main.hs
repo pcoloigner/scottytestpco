@@ -15,8 +15,8 @@ import           Snap.Http.Server (httpServe, setPort)
 
 main :: IO ()
 main = do
-    port <- read <$> getEnv "PORT"
-    let config = setPort port mempty
+    --port <- read <$> getEnv "PORT"
+    let config = setPort 8080 mempty
     httpServe config site
 
 site :: Snap ()
